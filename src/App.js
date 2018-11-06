@@ -1,19 +1,21 @@
 import React, {Component} from 'react';
 import './App.css';
 
-/**split the code and passing action to components
+/**Added id to the items
  * @param props
  * @returns {*}
  * @constructor
  */
+let id = 0;
+const getID = () => id += 1;
 
 const Recipe = (props) => (
-    <li className="recipe">{props.recipe}</li>
+    <li className="recipe">{props.recipe.title}</li>
 );
 
 const Recipes = (props) => (
     <ul className="recipes">
-      {props.recipes.map(recipe => <Recipe key={recipe} recipe={recipe}/>)}
+      {props.recipes.map(recipe => <Recipe key={recipe.id} recipe={recipe}/>)}
     </ul>
 );
 
@@ -48,7 +50,11 @@ class App extends Component {
     super();
 
     this.state = {
-      recipes: ['Waffles', 'Omelets']
+      recipes: [{
+        id: getID(),
+        title: 'Waffles'
+      },{id: getID(),
+        title: 'Omelets'}]
     }
   }
 
@@ -65,7 +71,10 @@ class App extends Component {
 
 
   addRecipe = (title) => {
-    const newRecipes = this.state.recipes.concat(title.value);
+    const newRecipes = this.state.recipes.concat({
+      id:getID(),
+      title: title.value
+    });
     this.setState({recipes: newRecipes});
   }
 }
