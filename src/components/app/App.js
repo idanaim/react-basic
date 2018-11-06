@@ -5,7 +5,7 @@ import {Recipes} from "../Recipes";
 import {getID} from "../../services/utils";
 
 
-/**Split to files and directories
+/**Add prop-types to components need to add prop-types to package.json
  * @param props
  * @returns {*}
  * @constructor
