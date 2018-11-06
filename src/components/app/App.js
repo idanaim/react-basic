@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
 import './App.css';
-import {AddRecipe} from "./components/AddRecipe";
-import {Recipes} from "./components/Recipes";
-import {getID} from "./services/utils";
+import {AddRecipe} from "../AddRecipe";
+import {Recipes} from "../Recipes";
+import {getID} from "../../services/utils";
 
 
 /**Split to files and directories
