@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import './App.css';
 import {AddRecipe} from "./components/AddRecipe";
 import {Recipes} from "./components/Recipes";
+import {getID} from "./services/utils";
 
 
 /**Split to files and directories
@@ -9,8 +10,6 @@ import {Recipes} from "./components/Recipes";
  * @returns {*}
  * @constructor
  */
-let id = 0;
-const getID = () => id += 1;
 
 class App extends Component {
   constructor() {
