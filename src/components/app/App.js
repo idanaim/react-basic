@@ -5,7 +5,7 @@ import {Recipes} from "../Recipes";
 import {getID} from "../../services/utils";
 
 
-/**Add prop-types to components need to add prop-types to package.json
+/**Add favirote with classNames to components need to add classNames to package.json
  * @param props
  * @returns {*}
  * @constructor
@@ -18,9 +18,13 @@ class App extends Component {
     this.state = {
       recipes: [{
         id: getID(),
-        title: 'Waffles'
-      },{id: getID(),
-        title: 'Omelets'}]
+        title: 'Waffles',
+        favorite: true
+      }, {
+        id: getID(),
+        title: 'Omelets',
+        favorite: false
+      }]
     }
   }
 
@@ -37,9 +41,11 @@ class App extends Component {
 
 
   addRecipe = (title) => {
+    const id = getID();
     const newRecipes = this.state.recipes.concat({
-      id:getID(),
-      title: title.value
+      id ,
+      title: title.value,
+      favorite: false
     });
     this.setState({recipes: newRecipes});
   }
