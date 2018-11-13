@@ -1,12 +1,13 @@
 import React, {Component} from "react";
 import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
 
-export class AddRecipe extends Component {
+ class AddRecipe extends Component {
 
   onSubmit(e) {
     e.preventDefault();
 
-    this.props.addRecipe(this.title);
+    this.props.addRecipe(this.title.value);
     this.title.value = '';
   }
 
@@ -24,3 +25,9 @@ export class AddRecipe extends Component {
 AddRecipe.propTypes = {
   addRecipe: PropTypes.func.isRequired
 };
+ const mapDispatchToProps = (dispatch)=> ({
+   addRecipe: (title) =>dispatch({type: 'ADD_RECIPE', title})
+ });
+
+
+ export default connect(null,mapDispatchToProps)(AddRecipe)
