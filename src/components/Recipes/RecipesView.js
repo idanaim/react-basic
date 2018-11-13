@@ -2,6 +2,9 @@ import React, {Component} from 'react';
 import Recipes from './Recipes';
 import AddRecipe from './AddRecipe';
 
+/**
+ * add actions to the components and constants
+ */
 
 class RecipesView extends Component {
 
