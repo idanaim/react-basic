@@ -10,10 +10,16 @@ class RecipesView extends Component {
 
   render() {
     return (
-        <div className="recipes-view">
+        <div>
           <h3>Recipes:</h3>
-          <AddRecipe />
-          <Recipes />
+          <div className="recipes-view">
+            <div className="middle-grid">
+              <Recipes/>
+            </div>
+            <div className="left-grid">
+              <AddRecipe/>
+            </div>
+          </div>
         </div>
     )
   }
