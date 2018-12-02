@@ -1,13 +1,21 @@
 import {getID} from "./services/utils";
 import {createStore} from 'redux';
-import * as consts from './constants/actions-types';
 
+
+/**
+ * Adding reducer to handle the actions
+ * Creating initialState
+ * and Create store and adding it to the window object
+ * @param state
+ * @param action
+ * @returns {*}
+ */
 
 const reducer = (state, action) => {
   console.log(`Got Action ${action.type}`);
 
   switch (action.type) {
-    case consts.ADD_RECIPE:
+    case 'ADD_RECIPE':
       const newRecipe = {
         id: getID(),
         title: action.title,
@@ -18,7 +26,7 @@ const reducer = (state, action) => {
         recipes: newRecipes
       });
 
-    case consts.TOGGLE_RECIPE:
+    case 'TOGGLE_RECIPE':
       const updatedRecipes = state.recipes.map(recipe => recipe.id !== action.id
           ? recipe
           : Object.assign({}, recipe, { favorite: !recipe.favorite }));

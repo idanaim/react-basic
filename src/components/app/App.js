@@ -5,7 +5,11 @@ import Header from "../header/Header";
 import {Footer} from "../footer/Footer";
 
 
-/**Add favirote with classNames to components need to add classNames to package.json
+/**Connection with redux:
+ * Add to package.json: redux, react-redux
+ * We should add Provider wrapper in the index.js
+ * Create store file
+ *
  * @param props
  * @returns {*}
  * @constructor
