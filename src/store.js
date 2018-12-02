@@ -20,6 +20,7 @@ const reducer = (state, action) => {
       const newRecipe = {
         id: getID(),
         title: action.title,
+        description: action.description,
         favorite: false
       };
       const newRecipes = state.recipes.concat(newRecipe);
@@ -30,7 +31,7 @@ const reducer = (state, action) => {
     case consts.TOGGLE_RECIPE:
       const updatedRecipes = state.recipes.map(recipe => recipe.id !== action.id
           ? recipe
-          : Object.assign({}, recipe, { favorite: !recipe.favorite }));
+          : Object.assign({}, recipe, {favorite: !recipe.favorite}));
 
       return Object.assign({}, state, {
         recipes: updatedRecipes
@@ -44,11 +45,14 @@ const initialState = {
   recipes: [{
     id: getID(),
     title: 'Waffles',
-    favorite: true
+    favorite: true,
+    description: 'Tasty and belgian'
+
   }, {
     id: getID(),
     title: 'Omelets',
-    favorite: false
+    favorite: false,
+    description: 'Easy egg work'
   }]
 }
 

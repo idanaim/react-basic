@@ -22,10 +22,15 @@ code {
     display: flex;
     text-align: left;
 }
+
 .recipes-view .middle-grid {
-width: 40%;
+    width: 40%;
 }
 
 .recipes-view .left-grid {
-width: 60%;
+    width: 60%;
+}
+
+.form-label {
+    display: block;
 }

@@ -7,15 +7,22 @@ class AddRecipe extends Component {
 
   onSubmit(e) {
     e.preventDefault();
-
-    this.props.addRecipe(this.title.value);
+    debugger;
+    this.props.addRecipe({title: this.title.value, description: this.description.value});
     this.title.value = '';
+    this.description.value = '';
   }
 
   render() {
     return (
         <form onSubmit={this.onSubmit.bind(this)}>
-          <input ref={e => this.title = e} type="text"/>
+          <div>
+            <label className="form-label">Title:</label><input ref={e => this.title = e} type="text"/>
+          </div>
+          <div>
+            <label className="form-label">Description:</label>
+            <textarea ref={e => this.description = e}/>
+          </div>
           <button>Add</button>
         </form>
 
@@ -28,5 +35,4 @@ AddRecipe.propTypes = {
 };
 
 
-
-export default connect(null, { addRecipe })(AddRecipe)
+export default connect(null, {addRecipe})(AddRecipe)
