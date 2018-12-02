@@ -8,7 +8,7 @@ import {Footer} from "./footer/Footer";
 
 
 
-/**Add favirote with classNames to components need to add classNames to package.json
+/**Add favorite with classNames to components need to add classNames to package.json
  * @param props
  * @returns {*}
  * @constructor
