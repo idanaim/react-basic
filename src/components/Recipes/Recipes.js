@@ -1,9 +1,10 @@
 import React from 'react';
 import {Recipe} from "./Recipe";
 import PropTypes from 'prop-types';
-import { connect } from 'react-redux';
+import {connect} from 'react-redux';
+import {toggleRecipe as toggle} from '../../actions/recipes';
 
- const Recipes = (props) => (
+const Recipes = (props) => (
     <ul className="recipes">
       {props.recipes.map(recipe => <Recipe key={recipe.id}
                                            recipe={recipe}
@@ -18,9 +19,8 @@ Recipes.propTypes = {
 
 const mapStateToProps = (state) => {
   return {
-    recipes:state.recipes,
-    toggle: () => console.log("Toggle")
+    recipes: state.recipes
   }
 };
 
-export default connect(mapStateToProps)(Recipes);
+export default connect(mapStateToProps, {toggle})(Recipes);

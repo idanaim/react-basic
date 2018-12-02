@@ -6,9 +6,7 @@ import {Footer} from "../footer/Footer";
 
 
 /**Connection with redux:
- * Add to package.json: redux, react-redux
- * We should add Provider wrapper in the index.js
- * Create store file
+ * Remove all to consts
  *
  * @param props
  * @returns {*}
