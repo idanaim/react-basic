@@ -6,7 +6,7 @@ import {Footer} from "../footer/Footer";
 
 
 /**Connection with redux:
- * Multiple reducer (add user)
+ * change user name
  *
  * @param props
  * @returns {*}

@@ -10,7 +10,10 @@ const Recipes = (props) => (
       {props.recipes.map(recipe => <Recipe key={recipe.id}
                                            recipe={recipe}
                                            toggle={props.toggle}/>)}
+      <div className="actions">
       <Link to="/add">Add Recipe</Link>
+      <Link to="/changeUser">Change user name</Link>
+         </div>
     </div>
 );
 

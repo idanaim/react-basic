@@ -25,7 +25,10 @@
   border-color: black;
 }
 
-
+.actions {
+    display: flex;
+    justify-content: space-between;
+}
 
 .App-header {
   background-color: #282c34;
