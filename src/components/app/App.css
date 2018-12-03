@@ -7,16 +7,24 @@
   height: 40vmin;
 }
 .recipes {
-  list-style: none;
   max-width: 500px;
   margin: 20px auto;
 }
 .recipe {
   padding: 20px;
-  border: 1px solid #beb2b2;
+  border: 5px solid orange;
   border-radius: 4px;
   margin-bottom: 5px;
+  display: block;
 }
+
+.recipe.current {
+  font-weight: bold;
+  color: black;
+  display: block;
+  border-color: black;
+}
+
 
 
 .App-header {

@@ -1,18 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import classNames from 'classnames';
+import { NavLink } from 'react-router-dom';
 
-export const Recipe = ({recipe, toggle}) => (
-    <li className={classNames(
-        {
-          recipe: true,
-          favorite: recipe.favorite
-        })}
-        onClick={() => toggle(recipe)}
-    >{recipe.title}</li>
+export const Recipe = ({recipe}) => (
+    <NavLink to={ `/recipe/${ recipe.id }` } className='recipe' activeClassName='current'>
+      {recipe.title}
+    </NavLink>
 );
 
 Recipe.propTypes = {
-  recipe: PropTypes.object.isRequired,
-  toggle: PropTypes.func.isRequired
+  recipe: PropTypes.object.isRequired
 };

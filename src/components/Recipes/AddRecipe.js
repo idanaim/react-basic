@@ -2,12 +2,12 @@ import React, {Component} from "react";
 import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
 import {addRecipe} from '../../actions/recipes';
+import { withRouter } from 'react-router-dom';
 
 class AddRecipe extends Component {
 
   onSubmit(e) {
     e.preventDefault();
-    debugger;
     this.props.addRecipe({title: this.title.value, description: this.description.value});
     this.title.value = '';
     this.description.value = '';
@@ -35,4 +35,4 @@ AddRecipe.propTypes = {
 };
 
 
-export default connect(null, {addRecipe})(AddRecipe)
+export default withRouter(connect(null, {addRecipe})(AddRecipe));

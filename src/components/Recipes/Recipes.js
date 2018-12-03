@@ -3,13 +3,15 @@ import {Recipe} from "./Recipe";
 import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
 import {toggleRecipe as toggle} from '../../actions/recipes';
+import {Link, withRouter} from 'react-router-dom';
 
 const Recipes = (props) => (
-    <ul className="recipes">
+    <div className="recipes">
       {props.recipes.map(recipe => <Recipe key={recipe.id}
                                            recipe={recipe}
                                            toggle={props.toggle}/>)}
-    </ul>
+      <Link to="/add">Add Recipe</Link>
+    </div>
 );
 
 Recipes.propTypes = {
@@ -23,4 +25,4 @@ const mapStateToProps = (state) => {
   }
 };
 
-export default connect(mapStateToProps, {toggle})(Recipes);
+export default withRouter(connect(mapStateToProps, {toggle})(Recipes));
