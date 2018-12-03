@@ -2,13 +2,16 @@ import React, {Component} from "react";
 import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
 import {addRecipe} from '../../actions/recipes';
-import { withRouter } from 'react-router-dom';
+import {withRouter} from 'react-router-dom';
+import {getID} from "../../services/utils";
 
 class AddRecipe extends Component {
 
   onSubmit(e) {
     e.preventDefault();
-    this.props.addRecipe({title: this.title.value, description: this.description.value});
+
+    const id = getID();
+    this.props.addRecipe({id, title: this.title.value, description: this.description.value});
     this.title.value = '';
     this.description.value = '';
   }

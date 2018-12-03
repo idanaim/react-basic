@@ -6,10 +6,7 @@ import {Footer} from "../footer/Footer";
 
 
 /**Connection with redux:
- * Adding Router in the RecipeView and to the app.js
- * Changing the list structure from list to NavLink in recipe.js
- * Adding RecipeDetails for Recipe
- * And styling
+ * combineReducers set initial state in recipes reducer creating root file and clean store file
  *
  * @param props
  * @returns {*}

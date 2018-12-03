@@ -4,6 +4,7 @@ export const addRecipe = (recipe) => ({
   type: consts.ADD_RECIPE,
   title: recipe.title,
   description: recipe.description,
+  id:recipe.id
 });
 
 export const toggleRecipe = (recipe) => ({
