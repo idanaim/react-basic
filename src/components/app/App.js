@@ -6,7 +6,7 @@ import {Footer} from "../footer/Footer";
 
 
 /**Connection with redux:
- * combineReducers set initial state in recipes reducer creating root file and clean store file
+ * Multiple reducer (add user)
  *
  * @param props
  * @returns {*}
