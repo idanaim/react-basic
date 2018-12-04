@@ -1,35 +1,18 @@
 import * as consts from "../constants/actions-types";
-import {getID} from "../services/utils";
 
-const initialState = [{
-  id: getID(),
-  title: 'Waffles',
-  favorite: true,
-  description: 'Tasty and belgian'
-
-}, {
-  id: getID(),
-  title: 'Omelets',
-  favorite: false,
-  description: 'Easy egg work'
-}];
+const initialState = [];
 
 const reducer = (recipes = initialState, action) => {
   console.log(`Got Action ${action.type}`);
 
   switch (action.type) {
     case consts.ADD_RECIPE:
-      const newRecipe = {
-        id: action.id,
-        title: action.title,
-        description: action.description,
-        favorite: false
-      };
+      const newRecipe = Object.assign({},action.payload,{favorite:false});
       return recipes.concat(newRecipe);
 
 
     case consts.TOGGLE_RECIPE:
-      return recipes.map(recipe => recipe.id !== action.id
+      return recipes.map(recipe => recipe.id !== action.payload
           ? recipe
           : Object.assign({}, recipe, {favorite: !recipe.favorite}));
 

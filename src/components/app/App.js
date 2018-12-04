@@ -6,7 +6,7 @@ import {Footer} from "../footer/Footer";
 
 
 /**Connection with redux:
- * add api call
+ * clean up and fetch recipes
  *
  * @param props
  * @returns {*}

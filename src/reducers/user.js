@@ -8,10 +8,7 @@ const initalState = {
 const reducer = (user = initalState, action) => {
   switch (action.type) {
     case consts.SET_USER:
-      debugger
-      return Object.assign({}, user, {
-        name: action.name
-      });
+      return Object.assign({}, user,  action.payload);
     default:
       return user;
   }

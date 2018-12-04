@@ -13,7 +13,7 @@ const Recipes = (props) => (
       <div className="actions">
       <Link to="/add">Add Recipe</Link>
       <Link to="/changeUser">Change user name</Link>
-      <span onClick={props.fetchRecipes} className="fetch-recipes">fetch Recipes</span>
+      <span onClick={props.fetchRecipes} className="fetch-recipes">reset Recipes</span>
          </div>
     </div>
 );
