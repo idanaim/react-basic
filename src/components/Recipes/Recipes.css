@@ -24,6 +24,11 @@
     display: flex;
     justify-content: space-between;
 }
+
+.fetch-recipes {
+    text-decoration: underline;
+    cursor: pointer;
+}
 .favorite {
     font-weight: bold;
     background: yellow;

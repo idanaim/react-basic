@@ -1,18 +1,18 @@
 import * as consts from "../constants/actions-types";
 import {getID} from "../services/utils";
 
-const initialState =  [{
-    id: getID(),
-    title: 'Waffles',
-    favorite: true,
-    description: 'Tasty and belgian'
+const initialState = [{
+  id: getID(),
+  title: 'Waffles',
+  favorite: true,
+  description: 'Tasty and belgian'
 
-  }, {
-    id: getID(),
-    title: 'Omelets',
-    favorite: false,
-    description: 'Easy egg work'
-  }];
+}, {
+  id: getID(),
+  title: 'Omelets',
+  favorite: false,
+  description: 'Easy egg work'
+}];
 
 const reducer = (recipes = initialState, action) => {
   console.log(`Got Action ${action.type}`);
@@ -32,6 +32,9 @@ const reducer = (recipes = initialState, action) => {
       return recipes.map(recipe => recipe.id !== action.id
           ? recipe
           : Object.assign({}, recipe, {favorite: !recipe.favorite}));
+
+    case consts.SET_RECIPES:
+      return action.payload;
 
     default:
       return recipes;
