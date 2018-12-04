@@ -6,7 +6,7 @@ import {Footer} from "../footer/Footer";
 
 
 /**Connection with redux:
- * add favorite component and styling
+ * Middleware
  *
  * @param props
  * @returns {*}
