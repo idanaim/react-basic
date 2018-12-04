@@ -4,7 +4,7 @@ import AddRecipe from './AddRecipe';
 import {Route, Switch} from 'react-router-dom';
 import RecipeDetails from "./RecipeDetails";
 import ChangeUser from "../change-user/ChangeUser";
-
+import './Recipes.css';
 /**
  * add actions to the components and constants
  */

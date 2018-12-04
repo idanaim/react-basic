@@ -13,24 +13,6 @@ code {
     monospace;
 }
 
-.favorite {
-    font-weight: bold;
-    background: yellow;
-}
-
-.recipes-view {
-    display: flex;
-    text-align: left;
-}
-
-.recipes-view .middle-grid {
-    width: 40%;
-}
-
-.recipes-view .left-grid {
-    width: 60%;
-}
-
 .form-label {
     display: block;
 }
