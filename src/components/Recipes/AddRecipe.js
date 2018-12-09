@@ -1,4 +1,4 @@
-import React, {Component} from "react";
+import React, { Component } from "react";
 import PropTypes from 'prop-types';
 
 export class AddRecipe extends Component {
@@ -12,10 +12,10 @@ export class AddRecipe extends Component {
 
   render() {
     return (
-        <form onSubmit={this.onSubmit.bind(this)}>
-          <input ref={e => this.title = e} type="text"/>
-          <button>Add</button>
-        </form>
+      <form onSubmit={this.onSubmit.bind(this)}>
+        <input ref={e => this.title = e} type="text" />
+        <button>Add</button>
+      </form>
 
     )
   }
